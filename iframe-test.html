@@ -3,29 +3,6 @@
         <title>iframe test</title>
     </head>
     <body>
-        <style>
-            iframe#thermometer {
-                width: 100%;
-                height: fit-content;
-                border: none;
-            }
-        </style>
-        <script>
-            window.onload = function() {
-                // Get the reference to the iframe
-                const iframe = document.getElementById("thermometer");
-                    
-                // Call the function initially and whenever the content changes
-                iframe.onload = function() {
-                    // Function to adjust the iframe height based on its content
-                    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-                };
-
-                if(iframe && iframe.contentWindow && iframe.contentWindow.document && iframe.contentWindow.document.body) {
-                    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-                }
-            }
-        </script>
-        <iframe src="thermometer.html" id="thermometer"></iframe>
+        <iframe src="thermometer.html" style="border:none;" width="100%" height="350"></iframe>
     </body>
 </html>
